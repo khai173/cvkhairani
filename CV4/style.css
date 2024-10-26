@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #1e40af;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: #e0e7ff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  header nav a:hover {
+    color: #60a5fa;
+  }
+  
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Gaya untuk Teks Welcome */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Sesuaikan warna latar belakang */
+  }
+  
+  .welcome-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e40af;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #1e40af;
+    animation: typing 3s steps(30, end), blink-caret 0.7s step-end infinite;
+  }
+  
+  /* Animasi Typing */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Animasi Kedipan Kursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #1e40af; }
+  }
+  
+  /* Foto Latar Belakang di Sekitar Foto Profil */
+.profile-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .profile-container::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 180px;
+    height: 180px;
+    background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan URL latar belakang yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Latar Belakang Foto Profil */
+.profile-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .profile-container::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 180px;
+    height: 180px;
+    background-image: url('RANI.jpg'); /* Ganti dengan URL atau path gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animasi untuk Skill, Hobi, dan Bagian Lainnya */
+  .summary {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .summary:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #1e40af;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+  
+  .bio {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4b5563;
+  }
+  
+  .instagram-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #1e40af;
+    border: 2px solid #1e40af;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: 0.3s;
+  }
+  
+  .instagram-link:hover {
+    background-color: #1e40af;
+    color: #ffffff;
+  }
+
+  .download-cv {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1e40af;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+    width: fit-content;
+    margin: 1rem auto;
+  }
+  
+  .download-cv:hover {
+    background-color: #60a5fa;
+  }
+/* Bagian Education Umum */
+.education-item {
+    display: flex;
+    align-items: center; /* Menyelaraskan logo dan teks */
+    margin: 1rem 0; /* Memberi jarak antara item pendidikan */
+  }
+  
+  .education-logo {
+    width: 40px; /* Ukuran logo */
+    height: 40px; /* Ukuran logo */
+    margin-right: 1rem; /* Jarak antara logo dan teks */
+  }
+  
+  .education-text {
+    font-size: 1rem; /* Ukuran font untuk teks pendidikan */
+    color: #333; /* Warna teks */
+  }
+/* Bagian Skills Umum */
+.skill-list {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0;
+  }
+  
+  .skill-item {
+    font-size: 1rem; /* Ukuran font untuk setiap skill */
+    font-weight: bold; /* Menjadikan teks tebal */
+    color: #333; /* Warna teks */
+    background-color: #e0f7fa; /* Latar belakang yang cerah */
+    padding: 0.5rem; /* Jarak dalam kotak skill */
+    margin: 0.5rem 0; /* Jarak antara setiap skill */
+    border-radius: 5px; /* Sudut melingkar pada kotak */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+  }
+  
+  /* Efek Hover pada Skill Item */
+  .skill-item:hover {
+    transform: scale(1.05); /* Membesar sedikit saat di-hover */
+    background-color: #b3e5fc; /* Mengubah warna latar belakang saat di-hover */
+  }
+    
+  .container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+  }
+  
+  .container p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  .education-entry {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .institution-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  /* Bagian Hobbies Umum */
+.hobby-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .hobby-box {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Warna Berbeda untuk Setiap Hobi */
+  .hobby-box:nth-child(1) { background-color: #ff6b6b; } /* Photography - Merah Muda */
+  .hobby-box:nth-child(2) { background-color: #4ecdc4; } /* Reading - Hijau Muda */
+  .hobby-box:nth-child(3) { background-color: #1e90ff; } /* Traveling - Biru */
+  .hobby-box:nth-child(4) { background-color: #ff9f1c; } /* Cooking - Oranye */
+  .hobby-box:nth-child(5) { background-color: #7d5fff; } /* Gaming - Ungu */
+  
+  /* Efek Hover */
+  .hobby-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+ 
+  /* Bagian Experience Umum */
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  /* Kartu Pengalaman */
+  .experience-box {
+    width: 48%; /* Mengatur lebar kolom agar tidak saling tumpang tindih */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Warna Kiri dan Kanan yang Berbeda */
+  .org-experience {
+    background-color: #4ecdc4; /* Hijau Muda untuk Organisasi */
+  }
+  
+  .job-experience {
+    background-color: #ff6b6b; /* Merah Muda untuk Pekerjaan */
+  }
+  
+  /* Gaya untuk List Pengalaman */
+  .experience-list {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0;
+  }
+  
+  .experience-item {
+    font-size: 1rem; /* Ukuran font untuk setiap pengalaman */
+    color: #333; /* Warna teks */
+    padding: 0.5rem; /* Jarak dalam item pengalaman */
+    border-radius: 5px; /* Sudut melingkar pada item */
+    transition: background-color 0.3s ease; /* Efek transisi */
+  }
+  
+  /* Efek Hover pada Item Pengalaman */
+  .experience-item:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Mengubah warna latar belakang saat di-hover */
+  }
+  
+  /* Efek Hover pada Kartu Pengalaman */
+  .experience-box:hover {
+    transform: translateY(-5px); /* Membesar sedikit saat di-hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Menguatkan bayangan saat di-hover */
+  }
+  
+  .certificate-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.certificate-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .certificate-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .details {
+    display: none;
+    font-size: 0.95rem;
+    color: #1e40af;
+  }
+  
+  .more-info {
+    color: #1e40af;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
